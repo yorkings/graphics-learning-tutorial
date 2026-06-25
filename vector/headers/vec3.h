@@ -14,12 +14,10 @@ class vec3{
         inline float get_r() const { return x; }
         inline float get_g() const { return y; }
         inline float get_b() const { return z; }
-
         inline vec3 operator-()const{ return vec3(-x,-y,-z);}
         inline vec3 &operator+= (const vec3 &d){x+=d.x;y+=d.y;z+=d.z; return *this;}        
         inline vec3 &operator*= (const float v){x*=v;y*=v;z*=v; return *this;}
         inline vec3 &operator/= (const float t){return *this*=1/t;}
-
         inline float length() const { return std::sqrt(x*x+y*y+z*z);}
         inline float squared_length() const { return x*x+y*y+z*z;}
         inline void make_unit_vector(){
