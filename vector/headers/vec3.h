@@ -2,9 +2,6 @@
 #include<iostream>
 #include<cmath>
 #include<cstdlib>
-#include<fstream>
-
-class Vec3 ;
 
 class vec3{
     public:
@@ -23,4 +20,20 @@ class vec3{
         inline vec3 &operator*= (const float v){x*=v;y*=v;z*=v; return *this;}
         inline vec3 &operator/= (const float t){return *this*=1/t;}
 
+        inline float length() const { return std::sqrt(x*x+y*y+z*z);}
+        inline float squared_length() const { return x*x+y*y+z*z;}
+        inline void make_unit_vector(){
+            float k=1.0f/length();
+            x*=k;y*=k;z*=k;
+        };
 };
+inline vec3 operator+(const vec3 &v1, const vec3 &v2);
+inline vec3 operator-(const vec3 &v1, const vec3 &v2);
+inline vec3 operator*(const vec3 &v1, const vec3 &v2);
+inline vec3 operator*(float t, const vec3 &v);
+inline vec3 operator*(const vec3 &v, float t);
+inline vec3 operator/(const vec3 &v, float t);
+inline float dot(const vec3 &v1, const vec3 &v2);   
+inline vec3 cross(const vec3 &v1, const vec3 &v2);
+
+std::string get_current_time();
