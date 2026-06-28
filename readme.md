@@ -21,3 +21,9 @@ there are two ways we used both **p6** and **p3**
 
  
  ![p6  implementation code](https://github.com/yorkings/graphics-learning-tutorial/blob/master/introduction/output-image.cpp)
+
+### introducing vector class 
+---
+<h4 style="color:red">x,y,z positioning</h4>
+
+you can find the examples in the vector folder
