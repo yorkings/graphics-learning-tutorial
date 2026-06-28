@@ -24,6 +24,6 @@ there are two ways we used both **p6** and **p3**
 
 ### introducing vector class 
 ---
-<h4 style="color:red">x,y,z positioning</h4>
+<span style="color:blue; font-size:18px">x,y,z positioning </span>
 
 you can find the examples in the vector folder
